@@ -1,0 +1,3 @@
+graft first_try
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  first_try/jupy *
