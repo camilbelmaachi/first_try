@@ -27,3 +27,12 @@ jobs:
     - name: Install package and test
       run: |
         make install test clean
+    - deploy_heroku:
+      runs-on: ubuntu-latest
+      steps:
+       - uses: actions/checkout@v2
+       - uses: akhileshns/heroku-deploy@v3.0.4 # This is the action
+         with:
+           heroku_api_key: ${{secrets.234eb663-1db2-4af2-8d40-05995f270893}}
+           heroku_app_name: "repotestingnb" # Must be unique in Heroku
+           heroku_email: "camilbel16@gmail.com"
